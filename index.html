@@ -394,42 +394,29 @@
   <div class="container is-max-desktop">
 
     <h2 class="title is-3 has-text-centered">
-      Generation Results &amp; Uncertainty Analysis
+      Uncertainty Analysis &Case Studies
     </h2>
 
     <div class="content">
       <p>
-        Unlike deterministic approaches (e.g., U-Net), diffusion models naturally produce ensembles
-        of plausible radar images. This enables explicit analysis of generation uncertainty and
-        spatial variability under identical satellite and lightning conditions.
+        Unlike deterministic approaches (e.g., U-Net), diffusion models naturally produce ensembles of plausible radar images. This enables explicit analysis of generation uncertainty and spatial variability under identical satellite and lightning conditions.
       </p>
     </div>
 
     <!-- Uncertainty analysis -->
-    <iframe src="static/images/UncertaintyAnalysisall.pdf"
+    <iframe src="static/images/UncertaintyAnalysisall.jpg"
             width="100%" height="520"></iframe>
     <p class="has-text-centered">
-      <strong>Uncertainty analysis.</strong>
-      Comparison of repeated diffusion model sampling outputs and variance maps.
-      (top to bottom) Satellite and lightning image (regions of strong lightning activity are marked
-      with red dashed lines), ground truth radar image, average diffusion output, best diffusion
-      output, worst diffusion output, median diffusion output, and variance map.
-      The evaluation of the diffusion model’s sampling results is based on the average FSS scores,
-      which determine the quality of the outputs.
+      <strong>Uncertainty analysis.</strong> Comparison of repeated diffusion model sampling outputs and variance maps. (top to bottom) Satellite and lightning image (regions oflightning activity are marked with red dashed lines), ground truth radar image, average diffusion output, best diffusion output, worst diffusion output, median diffusion output, and variance map. The evaluation of the diffusion model’s sampling results is based on the average FSS scores, which determine the quality of the outputs.
     </p>
 
     <br>
 
     <!-- Example generations -->
-    <iframe src="static/images/2examples.pdf"
+    <iframe src="static/images/2examples.jpg"
             width="100%" height="520"></iframe>
     <p class="has-text-centered">
-      <strong>Example generations.</strong>
-      Comparison of the diffusion model and the baseline U-Net outputs.
-      Case 1 highlights extensive cloud coverage, while case 2 shows limited cloud coverage.
-      (left to right) Satellite and lightning visualization (lightning regions marked by red dashed
-      lines), ground truth radar images, baseline U-Net outputs, and diffusion model median outputs.
-      Metrics shown include MSE, R², FSS, CSI35, POD35, and FAR35.
+      <strong>Example generations.</strong> Comparison of the diffusion model and the baseline U-Net outputs. Case 1 highlights extensive cloud coverage, while case 2 shows limited cloud coverage. (left to right) Satellite and lightning visualization (lightning regions marked by red dashed lines), ground truth radar images, baseline U-Net outputs, and diffusion model median outputs. Metrics shown include MSE, R², FSS, CSI35, POD35, and FAR35.
     </p>
 
   </div>
@@ -448,7 +435,7 @@
 
     <div class="columns">
       <div class="column is-12">
-        <iframe src="static/images/DiffusionProcess.pdf"
+        <iframe src="static/images/DiffusionProcess.jpg"
                 width="100%" height="420"></iframe>
         <p class="has-text-centered">
           <strong>Diffusion process.</strong> Forward noising and reverse denoising.
@@ -458,7 +445,7 @@
 
     <div class="columns">
       <div class="column is-6">
-        <iframe src="static/images/Architecture2.pdf"
+        <iframe src="static/images/Architecture2.jpg"
                 width="100%" height="420"></iframe>
         <p class="has-text-centered">
           <strong>Training loop.</strong> Noise injection and conditional denoising.
@@ -466,7 +453,7 @@
       </div>
 
       <div class="column is-6">
-        <iframe src="static/images/Architecture3.pdf"
+        <iframe src="static/images/Architecture3.jpg"
                 width="100%" height="420"></iframe>
         <p class="has-text-centered">
           <strong>Sampling loop.</strong> Iterative generation from pure noise.
@@ -489,7 +476,7 @@
 
     <div class="columns">
       <div class="column is-6">
-        <iframe src="static/pdfs/overall_fss.pdf"
+        <iframe src="static/images/overall_fss.jpg"
                 width="100%" height="420"></iframe>
         <p class="has-text-centered">
           <strong>FSS evaluation.</strong> Performance across thresholds and scales.
@@ -497,7 +484,7 @@
       </div>
 
       <div class="column is-6">
-        <iframe src="static/pdfs/kde_reflectivity_PDF.pdf"
+        <iframe src="static/images/kde_reflectivity_PDF.jpg"
                 width="100%" height="420"></iframe>
         <p class="has-text-centered">
           <strong>Reflectivity distribution.</strong> KDE and PDF comparison with real radar.
