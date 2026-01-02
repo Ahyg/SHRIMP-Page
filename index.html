@@ -298,7 +298,7 @@
           <!-- Affiliations / Venue -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              The University of Sydney &amp; Australian Bureau of Meteorology<br>
+              The University of Sydney &amp; The Bureau of Meteorology<br>
               <em>Artificial Intelligence for the Earth Systems (AIES), 2026</em>
             </span>
           </div>
@@ -350,32 +350,27 @@
   </div>
 </section>
 
-<!-- Teaser figure (Figure 1) -->
-<section class="hero teaser">
+<!-- Motivation / Overview -->
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body has-text-centered">
+    <h2 class="title is-3">Motivation &amp; Overview</h2>
 
-      <!-- Figure 1 image -->
-      <figure>
-        <img
-          src="static/images/fig1_overview.png"
-          alt="Overview of weather radar coverage, satellite observations, and lightning data used for synthetic radar generation"
-          style="max-width: 100%; height: auto;"
-          loading="lazy"
-        />
-
-        <!-- Figure caption -->
-        <figcaption class="subtitle has-text-centered">
-          <strong>Figure 1.</strong>
-          Overview of the meteorological observation used in this study, including weather radar coverage and reflectivity, geostationary satellite infrared imagery, and ground-based lightning observations.
-          The limited spatial coverage of radar motivates the synthesis of radar reflectivity from satellite and lightning data using generative diffusion models.
-        </figcaption>
-      </figure>
-
+    <div class="content has-text-justified">
+      <p>
+        Weather radar observations are critical for severe weather monitoring and nowcasting, yet their spatial coverage is limited, particularly across remote regions of Australia. This motivates the development of learning-based methods that can transform wide-coverage satellite observations into radar-like reflectivity imagery.
+      </p>
     </div>
+
+    <figure>
+      <img src="static/images/fig1_overview.jpg"
+           alt="Weather radars, radar image, satellite image, lightning observation"
+           loading="lazy">
+      <figcaption class="has-text-centered">
+        <strong>Fig. 1.</strong> Weather radars; radar image; satellite image; lightning observation.
+      </figcaption>
+    </figure>
   </div>
 </section>
-<!-- End teaser figure -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -395,46 +390,116 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Generation Results & Uncertainty -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Generation Results &amp; Uncertainty Analysis</h2>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+    <div class="content has-text-justified">
+      <p>
+        Unlike deterministic regression-based approaches, diffusion models naturally produce ensembles
+        of plausible radar realizations. This enables explicit analysis of generation uncertainty and
+        spatial variability under identical satellite and lightning conditions.
+      </p>
+    </div>
+
+    <div class="columns is-multiline">
+      <div class="column is-6">
+        <iframe src="static/pdfs/UncertaintyAnalysisall.pdf"
+                width="100%" height="420"></iframe>
+        <p class="has-text-centered">
+          <strong>Uncertainty analysis.</strong> Ensemble statistics and variance maps.
+        </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+
+      <div class="column is-6">
+        <iframe src="static/pdfs/2examples.pdf"
+                width="100%" height="420"></iframe>
+        <p class="has-text-centered">
+          <strong>Example generations.</strong> Multiple diffusion samples under identical conditions.
+        </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+
+<!-- Methodology -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Methodology: Conditional Diffusion Framework</h2>
+
+    <div class="content has-text-justified">
+      <p>
+        We adopt a conditional diffusion framework based on DDIM, where satellite infrared channels
+        and lightning observations serve as conditioning inputs. A modified U-Net backbone with
+        multi-scale features and time embedding is used to predict clean radar reflectivity from
+        noisy inputs.
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column is-12">
+        <iframe src="static/pdfs/DiffusionProcess.pdf"
+                width="100%" height="420"></iframe>
+        <p class="has-text-centered">
+          <strong>Diffusion process.</strong> Forward noising and reverse denoising.
+        </p>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-6">
+        <iframe src="static/pdfs/Architecture2.pdf"
+                width="100%" height="420"></iframe>
+        <p class="has-text-centered">
+          <strong>Training loop.</strong> Noise injection and conditional denoising.
+        </p>
+      </div>
+
+      <div class="column is-6">
+        <iframe src="static/pdfs/Architecture3.pdf"
+                width="100%" height="420"></iframe>
+        <p class="has-text-centered">
+          <strong>Sampling loop.</strong> Iterative generation from pure noise.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quantitative Evaluation -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Quantitative Evaluation</h2>
+
+    <div class="content has-text-justified">
+      <p>
+        We evaluate the generated radar reflectivity fields using meteorologically meaningful
+        metrics, including the Fractions Skill Score (FSS) across multiple thresholds and spatial
+        scales, as well as distributional consistency of reflectivity values.
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column is-6">
+        <iframe src="static/pdfs/overall_fss.pdf"
+                width="100%" height="420"></iframe>
+        <p class="has-text-centered">
+          <strong>FSS evaluation.</strong> Performance across thresholds and scales.
+        </p>
+      </div>
+
+      <div class="column is-6">
+        <iframe src="static/pdfs/kde_reflectivity_PDF.pdf"
+                width="100%" height="420"></iframe>
+        <p class="has-text-centered">
+          <strong>Reflectivity distribution.</strong> KDE and PDF comparison with real radar.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- Paper poster -->
 <section class="hero is-small is-light">
