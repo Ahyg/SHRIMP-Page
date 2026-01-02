@@ -393,10 +393,11 @@
       <img src="static/images/UncertaintyAnalysisall.jpg"
            alt="Uncertainty analysis: multiple diffusion samples and variance map"
            loading="lazy">
+      <figcaption class="has-text-centered">
+        <strong>Uncertainty analysis.</strong> Comparison of repeated diffusion model sampling outputs and variance maps. (top to bottom) Satellite and lightning image (regions of lightning activity are marked with red dashed lines), ground truth radar image, average diffusion output, best diffusion output, worst diffusion output, median diffusion output, and variance map. The evaluation of the diffusion model’s sampling results is based on the average FSS scores, which determine the quality of the outputs.
+      </figcaption>
     </figure>
-    <p class="has-text-centered mt-3">
-      <strong>Uncertainty analysis.</strong> Comparison of repeated diffusion model sampling outputs and variance maps. (top to bottom) Satellite and lightning image (regions of lightning activity are marked with red dashed lines), ground truth radar image, average diffusion output, best diffusion output, worst diffusion output, median diffusion output, and variance map. The evaluation of the diffusion model’s sampling results is based on the average FSS scores, which determine the quality of the outputs.
-    </p>
+
 
     <hr class="my-5">
 
@@ -405,10 +406,11 @@
       <img src="static/images/2examples.jpg"
            alt="Case studies: baseline U-Net vs diffusion model outputs"
            loading="lazy">
+      <figcaption class="has-text-centered">
+        <strong>Example generations.</strong> Comparison of the diffusion model and the baseline U-Net outputs. Case 1 highlights extensive cloud coverage, while case 2 shows limited cloud coverage. (left to right) Satellite and lightning visualization (lightning regions marked by red dashed lines), ground truth radar images, baseline U-Net outputs, and diffusion model median outputs. Metrics shown include MSE, R², FSS, CSI35, POD35, and FAR35.
+      </figcaption>
     </figure>
-    <p class="has-text-centered mt-3">
-      <strong>Example generations.</strong> Comparison of the diffusion model and the baseline U-Net outputs. Case 1 highlights extensive cloud coverage, while case 2 shows limited cloud coverage. (left to right) Satellite and lightning visualization (lightning regions marked by red dashed lines), ground truth radar images, baseline U-Net outputs, and diffusion model median outputs. Metrics shown include MSE, R², FSS, CSI35, POD35, and FAR35.
-    </p>
+
 
   </div>
 </section>
@@ -434,11 +436,10 @@
       <img src="static/images/DiffusionProcess.jpg"
            alt="Forward diffusion and reverse denoising process"
            loading="lazy">
+      <figcaption class="has-text-centered">
+        <strong>Diffusion process.</strong> Illustration of the forward noising process and the reverse denoising generation procedure.
+      </figcaption>
     </figure>
-    <p class="has-text-centered mt-3">
-      <strong>Diffusion process.</strong>
-      Illustration of the forward noising process and the reverse denoising generation procedure.
-    </p>
 
     <hr class="my-5">
 
@@ -449,11 +450,11 @@
           <img src="static/images/Architecture2.jpg"
                alt="Training loop of the conditional diffusion model"
                loading="lazy">
+          <figcaption class="has-text-centered">
+            <strong>Training loop.</strong> Noise injection and conditional denoising during model optimization.
+          </figcaption>
         </figure>
-        <p class="has-text-centered mt-3">
-          <strong>Training loop.</strong>
-          Noise injection and conditional denoising during model optimization.
-        </p>
+
       </div>
 
       <div class="column is-6">
@@ -461,11 +462,10 @@
           <img src="static/images/Architecture3.jpg"
                alt="Sampling loop of the conditional diffusion model"
                loading="lazy">
+          <figcaption class="has-text-centered">
+            <strong>Sampling loop.</strong> Iterative generation from pure noise conditioned on satellite and lightning observations.
+          </figcaption>
         </figure>
-        <p class="has-text-centered mt-3">
-          <strong>Sampling loop.</strong>
-          Iterative generation from pure noise conditioned on satellite and lightning observations.
-        </p>
       </div>
     </div>
 
@@ -481,9 +481,7 @@
 
     <div class="content has-text-justified">
       <p>
-        We evaluate the generated radar reflectivity images using meteorologically meaningful metrics,
-        including the Fractions Skill Score (FSS) across multiple thresholds and spatial scales, as well as
-        distributional comparisons of reflectivity values.
+        We evaluate the generated radar reflectivity images using meteorologically meaningful metrics, including the Fractions Skill Score (FSS) across multiple thresholds and spatial scales, as well as distributional comparisons of reflectivity values.
       </p>
     </div>
 
@@ -492,11 +490,10 @@
       <img src="static/images/overall_fss.jpg"
            alt="Fractions Skill Score (FSS) evaluation across thresholds and scales"
            loading="lazy">
+      <figcaption class="has-text-centered">
+        <strong>FSS evaluation.</strong> Performance across thresholds and spatial scales.
+      </figcaption>  
     </figure>
-    <p class="has-text-centered mt-3">
-      <strong>FSS evaluation.</strong>
-      Performance across thresholds and spatial scales.
-    </p>
 
     <br><br>
 
@@ -505,11 +502,10 @@
       <img src="static/images/kde_reflectivity_PDF.jpg"
            alt="Reflectivity distribution comparison using KDE and PDF"
            loading="lazy">
+      <figcaption class="has-text-centered">
+        <strong>Reflectivity distribution.</strong> KDE/PDF comparison between generated and real radar reflectivity.
+      </figcaption>
     </figure>
-    <p class="has-text-centered mt-3">
-      <strong>Reflectivity distribution.</strong>
-      KDE/PDF comparison between generated and real radar reflectivity.
-    </p>
 
   </div>
 </section>
