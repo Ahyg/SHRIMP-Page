@@ -5,28 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
   <meta name="title" content="Enhancing Production of Synthetic Radar Images from Geostationary Satellite Observations through Generative Diffusion Models - Yuguang Hu, Daochang Liu, Alain Protat, Valentin Louf, Jordan Brook, Chang Xu">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="☁️🌩️🌦️🌧️⛈️ Advancing the application of generative AI in meteorology! Radar observations play a crucial role in modern weather monitoring and nowcasting, but their spatial coverage is limited. This research leverages diffusion models to generate radar reflectivity images from geostationary satellite observations. Our findings show that diffusion models can not only reproduce radar-like spatial structures, but also deliver strong performance across meteorologically relevant metrics. This opens up promising directions for integrating generative AI into future weather nowcasting and data assimilation systems.">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
   <meta name="keywords" content="Computer vision, Machine learning, Data science, Deep learning, Artificial intelligence">
-  <!-- TODO: List all authors -->
   <meta name="author" content="Yuguang Hu, Daochang Liu, Alain Protat, Valentin Louf, Jordan Brook, Chang Xu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
   <meta property="og:site_name" content="The University of Sydney">
-  <!-- TODO: Same as paper title above -->
   <meta property="og:title" content="Enhancing Production of Synthetic Radar Images from Geostationary Satellite Observations through Generative Diffusion Models">
-  <!-- TODO: Same as description above -->
   <meta property="og:description" content="☁️🌩️🌦️🌧️⛈️ Advancing the application of generative AI in meteorology! Radar observations play a crucial role in modern weather monitoring and nowcasting, but their spatial coverage is limited. This research leverages diffusion models to generate radar reflectivity images from geostationary satellite observations. Our findings show that diffusion models can not only reproduce radar-like spatial structures, but also deliver strong performance across meteorologically relevant metrics. This opens up promising directions for integrating generative AI into future weather nowcasting and data assimilation systems.">
-  <!-- TODO: Replace with your actual website URL -->
   <meta property="og:url" content="https://yuguanghu.com/SHRIMP-Page/">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
   <meta property="og:image" content="https://yuguanghu.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -39,15 +30,10 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
   <!-- <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE"> -->
-  <!-- TODO: Replace with first author's Twitter handle -->
   <!-- <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE"> -->
-  <!-- TODO: Same as paper title above -->
   <meta name="twitter:title" content="Enhancing Production of Synthetic Radar Images from Geostationary Satellite Observations through Generative Diffusion Models">
-  <!-- TODO: Same as description above -->
   <meta name="twitter:description" content="☁️🌩️🌦️🌧️⛈️ Advancing the application of generative AI in meteorology! Radar observations play a crucial role in modern weather monitoring and nowcasting, but their spatial coverage is limited. This research leverages diffusion models to generate radar reflectivity images from geostationary satellite observations. Our findings show that diffusion models can not only reproduce radar-like spatial structures, but also deliver strong performance across meteorologically relevant metrics. This opens up promising directions for integrating generative AI into future weather nowcasting and data assimilation systems.">
-  <!-- TODO: Same as social preview image above -->
   <meta name="twitter:image" content="https://yuguanghu.com/static/images/social_preview.png">
   <meta name="twitter:image:alt" content="Enhancing Production of Synthetic Radar Images from Geostationary Satellite Observations through Generative Diffusion Models - Research Preview">
 
@@ -77,7 +63,6 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <!-- TODO: Replace with your paper title and authors -->
   <title>Enhancing Production of Synthetic Radar Images from Geostationary Satellite Observations through Generative Diffusion Models - Yuguang Hu, Daochang Liu, Alain Protat, Valentin Louf, Jordan Brook, Chang Xu | Academic Research</title>
   
   <!-- Favicon and App Icons -->
@@ -378,7 +363,6 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
             The limited coverage of radar sites has given rise to a demand for transforming the extensive coverage of weather satellite observations into high-resolution and accurate synthetic radar reflectivity imagery. In this study, we introduce a new method that utilizes generative diffusion models to address this challenge. Starting from pure noise, our diffusion model takes infrared images from the Himawari geostationary weather satellite and lightning observations from a ground-based network as inputs to control the generation process. The model’s iterative diffusion and denoising process helps capture the intrinsic uncertainty of satellite-to-radar transformation by generating probabilistic results, whereas nongenerative methods can only produce deterministic outputs. Our new technique improves the granularity and spatial accuracy of synthetic radar reflectivity imagery compared to previously published nongenerative U-Net models. In our experiments, the new technique enhances the emulation of severe weather by capturing finer visual structures in areas with strong radar echoes. Results show that images generated by our model outperform traditional U-Net models on key metrics such as the fractions skill score (FSS) across multiple thresholds, with the average FSS increasing from 0.40 to 0.50, and also produce a much improved statistical distribution of reflectivity, especially at the low and high ends of the distribution.
           </p>
@@ -394,28 +378,35 @@
   <div class="container is-max-desktop">
 
     <h2 class="title is-3 has-text-centered">
-      Uncertainty Analysis &Case Studies
+      Uncertainty Analysis &amp; Case Studies
     </h2>
 
-    <div class="content">
+    <div class="content has-text-justified">
       <p>
-        Unlike deterministic approaches (e.g., U-Net), diffusion models naturally produce ensembles of plausible radar images. This enables explicit analysis of generation uncertainty and spatial variability under identical satellite and lightning conditions.
+        Unlike deterministic approaches (e.g., U-Net), diffusion models naturally produce ensembles of plausible radar images.
+        This enables explicit analysis of generation uncertainty and spatial variability under identical satellite and lightning conditions.
       </p>
     </div>
 
-    <!-- Uncertainty analysis -->
-    <iframe src="static/images/UncertaintyAnalysisall.jpg"
-            width="100%" height="520"></iframe>
-    <p class="has-text-centered">
-      <strong>Uncertainty analysis.</strong> Comparison of repeated diffusion model sampling outputs and variance maps. (top to bottom) Satellite and lightning image (regions oflightning activity are marked with red dashed lines), ground truth radar image, average diffusion output, best diffusion output, worst diffusion output, median diffusion output, and variance map. The evaluation of the diffusion model’s sampling results is based on the average FSS scores, which determine the quality of the outputs.
+    <!-- Uncertainty analysis (image) -->
+    <figure class="image figure-max">
+      <img src="static/images/UncertaintyAnalysisall.jpg"
+           alt="Uncertainty analysis: multiple diffusion samples and variance map"
+           loading="lazy">
+    </figure>
+    <p class="has-text-centered mt-3">
+      <strong>Uncertainty analysis.</strong> Comparison of repeated diffusion model sampling outputs and variance maps. (top to bottom) Satellite and lightning image (regions of lightning activity are marked with red dashed lines), ground truth radar image, average diffusion output, best diffusion output, worst diffusion output, median diffusion output, and variance map. The evaluation of the diffusion model’s sampling results is based on the average FSS scores, which determine the quality of the outputs.
     </p>
 
-    <br>
+    <hr class="my-5">
 
-    <!-- Example generations -->
-    <iframe src="static/images/2examples.jpg"
-            width="100%" height="520"></iframe>
-    <p class="has-text-centered">
+    <!-- Example generations (image) -->
+    <figure class="image figure-max">
+      <img src="static/images/2examples.jpg"
+           alt="Case studies: baseline U-Net vs diffusion model outputs"
+           loading="lazy">
+    </figure>
+    <p class="has-text-centered mt-3">
       <strong>Example generations.</strong> Comparison of the diffusion model and the baseline U-Net outputs. Case 1 highlights extensive cloud coverage, while case 2 shows limited cloud coverage. (left to right) Satellite and lightning visualization (lightning regions marked by red dashed lines), ground truth radar images, baseline U-Net outputs, and diffusion model median outputs. Metrics shown include MSE, R², FSS, CSI35, POD35, and FAR35.
     </p>
 
@@ -425,72 +416,101 @@
 <!-- Methodology -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Methodology: Conditional Diffusion Framework</h2>
+
+    <h2 class="title is-3 has-text-centered">
+      Methodology: Conditional Diffusion Framework
+    </h2>
 
     <div class="content has-text-justified">
       <p>
-        We adopt a conditional diffusion framework, where satellite infrared channels and lightning observations serve as conditioning inputs. A modified U-Net backbone with multi-scale features and time embedding is used to predict clean radar reflectivity from noisy inputs.
+        We adopt a conditional diffusion framework, where satellite infrared channels and lightning observations
+        serve as conditioning inputs. A modified U-Net backbone with multi-scale feature extraction and time
+        embeddings is used to predict clean radar reflectivity fields from noisy inputs.
       </p>
     </div>
 
-    <div class="columns">
-      <div class="column is-12">
-        <iframe src="static/images/DiffusionProcess.jpg"
-                width="100%" height="420"></iframe>
-        <p class="has-text-centered">
-          <strong>Diffusion process.</strong> Forward noising and reverse denoising.
+    <!-- Diffusion process -->
+    <figure class="image figure-max">
+      <img src="static/images/DiffusionProcess.jpg"
+           alt="Forward diffusion and reverse denoising process"
+           loading="lazy">
+    </figure>
+    <p class="has-text-centered mt-3">
+      <strong>Diffusion process.</strong>
+      Illustration of the forward noising process and the reverse denoising generation procedure.
+    </p>
+
+    <hr class="my-5">
+
+    <!-- Architecture: training & sampling -->
+    <div class="columns is-variable is-6">
+      <div class="column is-6">
+        <figure class="image figure-small">
+          <img src="static/images/Architecture2.jpg"
+               alt="Training loop of the conditional diffusion model"
+               loading="lazy">
+        </figure>
+        <p class="has-text-centered mt-3">
+          <strong>Training loop.</strong>
+          Noise injection and conditional denoising during model optimization.
+        </p>
+      </div>
+
+      <div class="column is-6">
+        <figure class="image figure-small">
+          <img src="static/images/Architecture3.jpg"
+               alt="Sampling loop of the conditional diffusion model"
+               loading="lazy">
+        </figure>
+        <p class="has-text-centered mt-3">
+          <strong>Sampling loop.</strong>
+          Iterative generation from pure noise conditioned on satellite and lightning observations.
         </p>
       </div>
     </div>
 
-    <div class="columns">
-      <div class="column is-6">
-        <iframe src="static/images/Architecture2.jpg"
-                width="100%" height="420"></iframe>
-        <p class="has-text-centered">
-          <strong>Training loop.</strong> Noise injection and conditional denoising.
-        </p>
-      </div>
-
-      <div class="column is-6">
-        <iframe src="static/images/Architecture3.jpg"
-                width="100%" height="420"></iframe>
-        <p class="has-text-centered">
-          <strong>Sampling loop.</strong> Iterative generation from pure noise.
-        </p>
-      </div>
-    </div>
   </div>
 </section>
+
 
 <!-- Quantitative Evaluation -->
 <section class="section">
   <div class="container is-max-desktop">
+
     <h2 class="title is-3 has-text-centered">Quantitative Evaluation</h2>
 
     <div class="content has-text-justified">
       <p>
-        We evaluate the generated radar reflectivity images using meteorologically meaningful metrics, including the Fractions Skill Score (FSS) across multiple thresholds and spatial scales.
+        We evaluate the generated radar reflectivity images using meteorologically meaningful metrics,
+        including the Fractions Skill Score (FSS) across multiple thresholds and spatial scales, as well as
+        distributional comparisons of reflectivity values.
       </p>
     </div>
 
-    <div class="columns">
-      <div class="column is-6">
-        <iframe src="static/images/overall_fss.jpg"
-                width="100%" height="420"></iframe>
-        <p class="has-text-centered">
-          <strong>FSS evaluation.</strong> Performance across thresholds and scales.
-        </p>
-      </div>
+    <!-- FSS -->
+    <figure class="image figure-medium">
+      <img src="static/images/overall_fss.jpg"
+           alt="Fractions Skill Score (FSS) evaluation across thresholds and scales"
+           loading="lazy">
+    </figure>
+    <p class="has-text-centered mt-3">
+      <strong>FSS evaluation.</strong>
+      Performance across thresholds and spatial scales.
+    </p>
 
-      <div class="column is-6">
-        <iframe src="static/images/kde_reflectivity_PDF.jpg"
-                width="100%" height="420"></iframe>
-        <p class="has-text-centered">
-          <strong>Reflectivity distribution.</strong> KDE and PDF comparison with real radar.
-        </p>
-      </div>
-    </div>
+    <br><br>
+
+    <!-- KDE / PDF -->
+    <figure class="image figure-medium">
+      <img src="static/images/kde_reflectivity_PDF.jpg"
+           alt="Reflectivity distribution comparison using KDE and PDF"
+           loading="lazy">
+    </figure>
+    <p class="has-text-centered mt-3">
+      <strong>Reflectivity distribution.</strong>
+      KDE/PDF comparison between generated and real radar reflectivity.
+    </p>
+
   </div>
 </section>
 
@@ -501,8 +521,7 @@
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/aies-AIES-D-25-0016.1.pdf" width="100%" height="550">
+      <iframe  src="static/pdfs/Enhancing Production of Synthetic Radar Images from Geostationary Satellite Observations through Generative Diffusion Models - Poster for NVIDIA GTC 2026.pdf" width="100%" height="550">
           </iframe>
         
       </div>
