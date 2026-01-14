@@ -238,6 +238,13 @@ function initInteractiveDemo() {
 
             idx = 0;
             render();
+
+            // Auto-start playback when the manifest is ready.
+            // Images have no audio, so this is generally allowed by browser autoplay policies.
+            if (frames.length) {
+                // Defer to the next tick to ensure DOM updates are painted first.
+                setTimeout(() => play(), 0);
+            }
         })
         .catch((err) => {
             console.warn(err);
