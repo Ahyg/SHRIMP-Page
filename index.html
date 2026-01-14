@@ -373,6 +373,88 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Interactive Demo -->
+<section class="section hero is-light" id="demo">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Interactive Demo</h2>
+
+    <div class="content has-text-justified">
+      <p>
+        Below is a time-synchronized demo that plays paired sequences of satellite images, ground-truth radar, and generated synthetic radar.
+        Use the scrubber to jump in time, or press play to autoplay like a video.
+      </p>
+    </div>
+
+    <div class="demo-player box">
+      <div class="columns is-variable is-4 is-multiline">
+        <div class="column is-4">
+          <div class="demo-panel">
+            <div class="demo-panel-header">Satellite</div>
+            <img id="demo-img-sat" class="demo-frame" alt="Satellite frame" loading="lazy">
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="demo-panel">
+            <div class="demo-panel-header">Ground-truth Radar</div>
+            <img id="demo-img-gt" class="demo-frame" alt="Ground truth radar frame" loading="lazy">
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="demo-panel">
+            <div class="demo-panel-header">Generated Radar</div>
+            <img id="demo-img-gen" class="demo-frame" alt="Generated radar frame" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-controls">
+        <div class="demo-toolbar">
+          <div class="buttons are-small">
+            <button id="demo-btn-play" class="button is-dark" type="button" aria-label="Play or pause demo">
+              <span class="icon"><i class="fas fa-play"></i></span>
+              <span id="demo-btn-play-text">Play</span>
+            </button>
+            <button id="demo-btn-prev" class="button" type="button" aria-label="Previous frame">
+              <span class="icon"><i class="fas fa-step-backward"></i></span>
+            </button>
+            <button id="demo-btn-next" class="button" type="button" aria-label="Next frame">
+              <span class="icon"><i class="fas fa-step-forward"></i></span>
+            </button>
+          </div>
+
+          <div class="demo-toolbar-right">
+            <div class="select is-small">
+              <select id="demo-speed" aria-label="Playback speed">
+                <option value="0.25">0.25×</option>
+                <option value="0.5">0.5×</option>
+                <option value="1" selected>1×</option>
+                <option value="2">2×</option>
+                <option value="4">4×</option>
+              </select>
+            </div>
+            <label class="checkbox demo-loop">
+              <input id="demo-loop" type="checkbox" checked>
+              Loop
+            </label>
+          </div>
+        </div>
+
+        <input id="demo-scrubber" class="demo-scrubber" type="range" min="0" max="0" value="0" step="1" aria-label="Demo timeline">
+        <div class="demo-meta">
+          <div class="demo-time">
+            <span id="demo-time-label">—</span>
+          </div>
+          <div class="demo-count">
+            <span id="demo-count-label">0 / 0</span>
+          </div>
+        </div>
+        <p id="demo-status" class="help demo-status">Loading demo…</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Interactive Demo -->
+
 <!-- Generation Results & Uncertainty -->
 <section class="section">
   <div class="container is-max-desktop">

@@ -749,5 +749,120 @@ a:focus {
   }
 }
 
+/* Interactive Demo */
+.demo-player {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  background: var(--background-primary);
+}
+
+.demo-panel {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: var(--background-secondary);
+}
+
+.demo-panel-header {
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--background-accent);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.demo-frame {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: var(--background-accent);
+}
+
+.demo-controls {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+}
+
+.demo-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.demo-toolbar-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.demo-loop {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+.demo-scrubber {
+  width: 100%;
+  margin: 0.75rem 0 0.5rem 0;
+  appearance: none;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  outline: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.demo-scrubber::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--background-primary);
+  border: 2px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+
+.demo-scrubber::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--background-primary);
+  border: 2px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+
+.demo-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.demo-status {
+  margin-top: 0.5rem;
+  color: var(--text-light);
+}
+
+@media screen and (max-width: 768px) {
+  .demo-toolbar {
+    justify-content: center;
+  }
+  .demo-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 
 

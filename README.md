@@ -73,6 +73,48 @@ Create a 1200x630px social preview image at `static/images/social_preview.png`.
 - Replace the favicon in `static/images/`
 - Works with GitHub Pages
 
+## Interactive Demo (time-synchronized slideshow)
+
+This repo includes an optional interactive demo section (inserted between **Abstract** and **Uncertainty Analysis & Case Studies**) that plays paired sequences of:
+
+- Satellite image
+- Ground-truth radar image
+- Generated synthetic radar image
+
+### How to add your own frames
+
+1. Put your images under a directory you like (recommended: `static/images/demo/`).
+2. (Recommended) Generate `static/data/demo_frames.json` using the provided script.
+
+#### Recommended filenames
+
+By default, the generator expects:
+
+- `Satellite_YYYYMMDD_HHMMSS.jpg`
+- `RadarGT_YYYYMMDD_HHMMSS.jpg`
+- `DiuRadar_YYYYMMDD_HHMMSS.jpg`
+
+Put them all under `static/images/demo/` and make sure the timestamp part matches across the three streams.
+
+#### Generate the manifest
+
+From the repo root:
+
+```bash
+python3 scripts/generate_demo_manifest.py --dir static/images/demo --fps 2 --out static/data/demo_frames.json
+```
+
+If you need different prefixes or file extension, pass `--sat-prefix/--gt-prefix/--gen-prefix` and `--ext`.
+
+#### Manifest format (if you want to edit manually)
+
+- `fps`: playback rate in frames per second (can be fractional like `0.5`)
+- `frames`: array of `{ t, sat, gt, gen }`
+  - `t` is any label you want (timestamp string recommended)
+  - `sat`, `gt`, `gen` are relative URLs to images (e.g. `static/images/demo/Sat_20250501_001000.jpg`)
+
+If the manifest is missing or empty, the demo section will show a friendly message instead of broken images.
+
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
 
